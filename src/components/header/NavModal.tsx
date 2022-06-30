@@ -15,7 +15,7 @@ export const NavModal = (props: INavModalProps) => {
         <Link className="link" to="/">
           HOME
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/animals">
           ANIMALS
         </Link>
       </article>

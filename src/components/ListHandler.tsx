@@ -27,7 +27,6 @@ export const ListHandler = () => {
       getAPI();
     }
   }, []);
-  console.log("state global:", animals);
 
   return <></>;
 };

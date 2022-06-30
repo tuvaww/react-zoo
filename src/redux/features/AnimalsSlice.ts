@@ -15,6 +15,8 @@ const animalSlice = createSlice({
     updateList: (state, action: IAction<number>) => {
       // ska ta emot index
       state.value[action.payload].isFed = !state.value[action.payload].isFed;
+      state.value[action.payload].canBeFed =
+        !state.value[action.payload].canBeFed;
     },
     /*   addProperty: (state) => {
       let aList = state.value;

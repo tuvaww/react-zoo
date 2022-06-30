@@ -1,16 +1,18 @@
 @import "./mixins/variables";
 @import "./mixins/mixins";
-@import "./parts/alertNotis";
+@import "./parts/alertHungry";
+@import "./parts/animalDetails";
 
 .animalsContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   @include phone-to-tablet {
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
   }
 
