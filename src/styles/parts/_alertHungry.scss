@@ -23,5 +23,15 @@
     /*  position: relative;
     left: 30%;
     top: 80px; */
+
+    .linkToFeed {
+      text-decoration: none;
+      color: black;
+      font-size: 10pt;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

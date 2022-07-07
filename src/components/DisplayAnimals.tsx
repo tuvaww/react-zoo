@@ -11,30 +11,22 @@ export const DisplayAnimals = () => {
   const dispath = useDispatch();
   const navigate = useNavigate();
 
-  /*  const navigateToDetails = () => {
-    navigate("/animals/:id");
-  }; */
-
-  console.log("animals", animals);
-
   let animalHTML = animals.map((a) => {
     return (
-      <>
-        <article key={a.id} className="animalContainer">
-          <div className="notisContainer">
-            {a.canBeFed && <AlertHungry isHungry={a} />}
-          </div>
-          <AnimalImg img={a.imageUrl} />
+      <article key={a.id} className="animalContainer">
+        <div className="notisContainer">
+          {a.canBeFed && <AlertHungry isHungry={a} />}
+        </div>
+        <AnimalImg img={a.imageUrl} />
 
-          <p className="animalName">{a.name}</p>
-          <Link className="readMoreButton" to={`/animals/${a.id}`}>
-            Read More
-          </Link>
-          {/*  <div className="readMoreButton" onClick={navigateToDetails}>
+        <p className="animalName">{a.name}</p>
+        <Link className="readMoreButton" to={`/animals/${a.id}`}>
+          Read More
+        </Link>
+        {/*  <div className="readMoreButton" onClick={navigateToDetails}>
           Read More
         </div> */}
-        </article>
-      </>
+      </article>
     );
   });
 

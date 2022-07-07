@@ -8,7 +8,6 @@
   .homeImgContainer {
     width: 100vw;
     height: 100%;
-    // background-color: black;
     background-image: url("../assets/dog.webp");
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,6 +31,7 @@
       position: fixed;
 
       .bi {
+        cursor: pointer;
         padding: 7px;
         font-size: 20pt;
         color: white;
@@ -71,9 +71,10 @@
       justify-content: end;
 
       .mobileLinksContainer {
-        padding: 10px;
+        cursor: pointer;
+        margin: 10px;
         width: 40px;
-        height: 100%;
+        height: 25px;
         display: flex;
         flex-direction: column;
         gap: 5px;

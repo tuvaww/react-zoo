@@ -9,7 +9,9 @@ export const AlertHungry = (props: IAlertHungryProps) => {
   return (
     <section className="alertContainer">
       <h1>{props.isHungry.name} is hungry</h1>
-      <Link to="/">Click here to feed {props.isHungry.name}</Link>
+      <Link className="linkToFeed" to="/">
+        Click here to feed {props.isHungry.name}
+      </Link>
     </section>
   );
 };
