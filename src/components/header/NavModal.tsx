@@ -1,10 +1,22 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 interface INavModalProps {
   closeModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const NavModal = (props: INavModalProps) => {
+  const { pathname } = useLocation();
+  const [pathBeforeChange, setPathBeforeChange] = useState(pathname);
+  useEffect(() => {
+    setPathBeforeChange(pathname);
+
+    if (pathname !== pathBeforeChange) {
+      closeModal();
+      setPathBeforeChange(pathname);
+    }
+  }, [pathname, pathBeforeChange]);
+
   const closeModal = () => {
     props.closeModal(!props.closeModal);
   };

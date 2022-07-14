@@ -1,0 +1,168 @@
+@import "./mixins/variables";
+@import "./mixins/mixins";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css");
+.navModalContainer {
+  text-align: right;
+  height: 200px;
+  width: 100vw;
+
+  background-color: $rosePink;
+  z-index: 3;
+  position: fixed;
+
+  .bi {
+    cursor: pointer;
+    padding: 7px;
+    font-size: 20pt;
+    color: white;
+  }
+
+  .linksContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+    .link {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.navContainer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: $brownTransparent;
+
+  .spaceModifier {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    h1 {
+      font-size: 30pt;
+      color: white;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 2px;
+    }
+  }
+
+  .mobileLinksContainer {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: end;
+    @include tablet {
+      display: none;
+    }
+
+    .hamburgerContainer {
+      cursor: pointer;
+      margin: 10px;
+      width: 40px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .mobileLink {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+      }
+    }
+  }
+
+  .desktopLinksContainer {
+    display: none;
+
+    @include tablet {
+      display: inline;
+      color: white;
+      display: flex;
+      justify-content: end;
+      gap: 12px;
+    }
+
+    .navLink {
+      color: white;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-right: 12px;
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footerContainer {
+  width: 100%;
+  height: 130px;
+  background-color: $brownTransparent;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: flex;
+
+  .footerSectionHead {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    h1,
+    h4 {
+      padding: 0;
+      margin: 0;
+    }
+    h1 {
+      margin-top: 10px;
+      font-size: 30pt;
+    }
+
+    .iconsContainer {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      gap: 16px;
+
+      .bi {
+        font-size: 16pt;
+      }
+    }
+  }
+  .footerSectionText {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    @include phone-to-tablet {
+      gap: 60px;
+    }
+
+    @include tablet-step1 {
+      gap: 120px;
+    }
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+
+      p {
+        color: white;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

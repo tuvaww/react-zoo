@@ -39,7 +39,6 @@ export const AnimalDetails = () => {
   const [detectChange, setDetectChange] = useState(true);
 
   const [fed, setFed] = useState(animal.isFed);
-  //console.log("i details animal", animal);
 
   useEffect(() => {
     if (params.id) {
@@ -69,15 +68,12 @@ export const AnimalDetails = () => {
       fullDateOnClick.getHours() +
       "." +
       fullDateOnClick.getMinutes();
-    //console.log("time", trimDate);
 
     let stringDate = trimDate.toString();
     let timeAndIndex: ITimeObject = { indexOfAnimal, stringDate };
 
     dispath(setFedTime(timeAndIndex));
     setDetectChange(!detectChange);
-    // console.log("animal", animal);
-    //console.log("detectChange", detectChange);
   };
 
   const changeAbilityToFeed = (index: number) => {
@@ -91,16 +87,15 @@ export const AnimalDetails = () => {
       setDetectChange(!detectChange);
 
       clearInterval(foodTimer);
-    }, 100000);
+    }, 3000 * 3000);
   };
 
   const alertFedNotis = (index: number) => {
     const alert = setInterval(() => {
       dispath(alertNotis(index));
       clearInterval(alert);
-    }, 120000);
+    }, 3600 * 4000);
   };
-  console.log("animal", animal);
 
   const navigateRoute = () => {
     navigate("/animals");

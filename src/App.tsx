@@ -5,18 +5,19 @@ import { Home } from "./components/pages/Home";
 import { Provider } from "react-redux";
 import Store from "./redux/Store";
 import { ListHandler } from "./components/ListHandler";
+import { MainLayout } from "./components/MainLayout";
 
 function App() {
-  //console.log(reduxAnimals);
-
   return (
     <Provider store={Store}>
       <ListHandler />
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/animals/*" element={<Animals />}></Route>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />}></Route>
+            <Route path="/animals/*" element={<Animals />}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </Provider>

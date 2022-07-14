@@ -10,6 +10,4 @@ export interface IAnimal {
   shortDescription: string;
   yearOfBirth: number;
   canBeFed: boolean;
-  /*  needToBeFedSoon: boolean;
-    canBeFed: boolean; */
 }

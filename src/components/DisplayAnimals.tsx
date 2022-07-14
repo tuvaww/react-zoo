@@ -20,12 +20,10 @@ export const DisplayAnimals = () => {
         <AnimalImg img={a.imageUrl} />
 
         <p className="animalName">{a.name}</p>
+
         <Link className="readMoreButton" to={`/animals/${a.id}`}>
           Read More
         </Link>
-        {/*  <div className="readMoreButton" onClick={navigateToDetails}>
-          Read More
-        </div> */}
       </article>
     );
   });
